@@ -25,8 +25,7 @@ public class Advent2 {
 
             if (checkReportSafety(arrays)) {
                 total++;
-            }
-            else if(checkPart2(arrays)){
+            } else if (checkPart2(arrays)) {
                 total++;
             }
         }
@@ -66,12 +65,14 @@ public class Advent2 {
 
     public static boolean checkPart2(int[] arrays) {
         for (int i = 0; i < arrays.length; i++) {
-            int[] tajp6it = new int[arrays.length-1];
-            for(int j=0, k=0; j<arrays.length;j++){
-                if(j==i) {continue;}
+            int[] tajp6it = new int[arrays.length - 1];
+            for (int j = 0, k = 0; j < arrays.length; j++) {
+                if (j == i) {
+                    continue;
+                }
                 tajp6it[k++] = arrays[j];
             }
-            if(checkReportSafety(tajp6it)){
+            if (checkReportSafety(tajp6it)) {
                 return true;
             }
         }
